@@ -22,3 +22,45 @@ Listview的下拉刷新和上啦加载更多，以及上啦的开关
 
 
 新浪微博@Wang丶Yan
+
+
+
+  *  Activity中的使用：
+  
+
+  RefreshListview.isOpenMoreLoading(false);//关闭上啦加载更多。默认开启
+  
+  //下拉和上啦的监听
+  
+
+
+
+RefreshListview.setonRefreshListener(
+          new YanRefreshListView.onRefreshListener() {
+
+            @Override
+            public void refresh() {
+                new  Handler(){
+
+
+                    @Override
+                    public void handleMessage(Message msg) {
+                        RefreshListview.setOnRefreshComplete();
+                    }
+                }.sendEmptyMessageDelayed(0,3000);
+
+            }
+
+            @Override
+            public void loadingMore() {
+                new  Handler(){
+
+
+                    @Override
+                    public void handleMessage(Message msg) {
+                        RefreshListview.setOnRefreshComplete();
+                    }
+                }.sendEmptyMessageDelayed(0,3000);
+            }
+        });
+
