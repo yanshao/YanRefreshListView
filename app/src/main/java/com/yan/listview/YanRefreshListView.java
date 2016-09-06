@@ -303,6 +303,8 @@ boolean  ismath=false;//判断是否占满一屏
                 Log.e("yyyy","gaodu="+this.getHeight());
                 if (ismath){
                     isLoadingMore=true;
+                }else{
+                    isLoadingMore=false;
                 }
 
                 Log.e("iii","isLoadingMore="+isLoadingMore);
@@ -323,6 +325,8 @@ boolean  ismath=false;//判断是否占满一屏
         if(totalItemCount > visibleItemCount){
             if (isCloseMoreLod){
                 ismath=true;
+            }else{
+                ismath=false;
             }
 
             //不满一屏

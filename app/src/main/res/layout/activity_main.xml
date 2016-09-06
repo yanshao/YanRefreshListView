@@ -2,11 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
 >
+<RelativeLayout
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimaryDark"
+    >
+    <CheckBox
+        android:id="@+id/isopen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启上啦加载更多"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:checked="true"
+        />
 
+</RelativeLayout>
     <com.yan.listview.YanRefreshListView
         android:id="@+id/RefreshListVuew"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/title"
         ></com.yan.listview.YanRefreshListView>
 </RelativeLayout>
