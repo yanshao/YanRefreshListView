@@ -24,6 +24,8 @@ Listview的下拉刷新和上啦加载更多，以及上啦的开关
 新浪微博@Wang丶Yan
 
 
+![image](https://github.com/yanshao/YanRefreshListView/blob/master/效果图.gif)
+
 
   *  Activity中的使用：
   
